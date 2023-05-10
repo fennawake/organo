@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Organo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a personal project where I will improving every day a little bit while I advance in my React JS course.
+
+# Description
+
+In this project we can to organize peoples in teams and search for them.
 
 ## Available Scripts
 
