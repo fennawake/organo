@@ -1,0 +1,24 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6278f7;
+    padding: 40px 80px;
+}
+
+.footer .social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+}
+
+.footer .social img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer .developed p {
+    font-size: 14px;
+    color: white;
+}

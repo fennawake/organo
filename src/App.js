@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Banner from './components/Banner';
 import Form from './components/Form';
 import Team from './components/Team';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -46,7 +47,7 @@ function App() {
   const [collaborators, setCollaborators] = useState([])
 
   const addNewCollaborator = (collaborator) => {
-    console.log(collaborator)
+    //console.log(collaborator)
     setCollaborators([...collaborators, collaborator])
   }
 
@@ -57,6 +58,8 @@ function App() {
 
       {teams.map(team => <Team key={team.name} name={team.name} primaryColor={team.primaryColor} secondaryColor={team.secondaryColor} collaborators={collaborators.filter(collaborator => collaborator.team === team.name)} />)}
 
+
+      <Footer />
     </div>
   );
 }
