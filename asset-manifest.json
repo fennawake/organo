@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/organo/static/css/main.d1cb20a3.css",
-    "main.js": "/organo/static/js/main.c05f00f6.js",
+    "main.css": "/organo/static/css/main.125cfe94.css",
+    "main.js": "/organo/static/js/main.a68b8e6b.js",
     "index.html": "/organo/index.html",
-    "main.d1cb20a3.css.map": "/organo/static/css/main.d1cb20a3.css.map",
-    "main.c05f00f6.js.map": "/organo/static/js/main.c05f00f6.js.map"
+    "main.125cfe94.css.map": "/organo/static/css/main.125cfe94.css.map",
+    "main.a68b8e6b.js.map": "/organo/static/js/main.a68b8e6b.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1cb20a3.css",
-    "static/js/main.c05f00f6.js"
+    "static/css/main.125cfe94.css",
+    "static/js/main.a68b8e6b.js"
   ]
 }
