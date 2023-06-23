@@ -1,15 +1,17 @@
+import { IoIosCloseCircle } from 'react-icons/io'
 import './Contributor.css'
 
-const Contributor = ({ name, image, position, backgroundHeader }) => {
+const Contributor = ({ collaborator, backgroundColor, deleteCollaborator }) => {
 
     return (
         <div className='contributor'>
-            <div className='header' style={{ backgroundColor: backgroundHeader }}>
-                <img src={image} alt={name} />
+            <IoIosCloseCircle className='delete' onClick={deleteCollaborator} />
+            <div className='header' style={{ backgroundColor: backgroundColor }}>
+                <img src={collaborator.image} alt={collaborator.name} />
             </div>
             <div className='footer'>
-                <h4>{name}</h4>
-                <h5>{position}</h5>
+                <h4>{collaborator.name}</h4>
+                <h5>{collaborator.position}</h5>
             </div>
         </div >
     )

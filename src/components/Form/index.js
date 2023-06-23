@@ -1,10 +1,10 @@
-import './Form.css'
+import { useState } from 'react'
+import Button from '../Button'
 import InputText from '../InputText'
 import Dropdown from '../Dropdown'
-import Button from '../Button'
-import { useState } from 'react'
+import './Form.css'
 
-const Form = (props) => {
+const Form = ({ addCollaborator, teams }) => {
 
     const [name, setName] = useState('')
     const [position, setPosition] = useState('')
@@ -13,7 +13,8 @@ const Form = (props) => {
 
     const saving = (event) => {
         event.preventDefault()
-        props.addCollaborator({
+        console.log('submitted form', name, position, image, team)
+        addCollaborator({
             name,
             position,
             image,
@@ -51,8 +52,9 @@ const Form = (props) => {
                     valueChanged={valueField => setImage(valueField)}
                 />
                 <Dropdown
-                    obrigatorio={true}
-                    label="Team" items={props.teamName}
+                    required={true}
+                    label="Team"
+                    items={teams}
                     valueField={team}
                     valueChanged={valueField => setTeam(valueField)}
                 />

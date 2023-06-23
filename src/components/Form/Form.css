@@ -1,22 +1,20 @@
 .form {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin: 80px 0;
-    width: 100%;
+    margin: 40px 0;
 }
 
-.form form {
+form {
     max-width: 80%;
-    background-color: #f2f2f2;
-    border-radius: 20px;
-    padding: 36px 64px;
-    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
+    background: #F7F7F7;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 20px 40px;
 }
 
-.form form h2 {
-    font-family: 'Prata';
-    font-style: normal;
+form h2 {
     font-weight: 400;
-    font-size: 32px;
-    line-height: 43px;
+    font-size: 22px;
 }
