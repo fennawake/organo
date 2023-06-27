@@ -222,8 +222,8 @@ function App() {
     setCollaborators([...collaborators, collaborator])
   }
 
-  const deleteCollaborator = () => {
-    console.log('deleting collaborator...')
+  const deleteCollaborator = (id) => {
+    setCollaborators(collaborators.filter(collaborator => collaborator.id !== id))
   }
 
   const changeTeamColor = (color, id) => {
@@ -245,17 +245,19 @@ function App() {
       <section className="teams">
         <h1>My organization</h1>
 
-        {teams.map((team, index) =>
-          <Team
+        {teams.map((team, index) => {
+          return <Team
             key={index}
             team={team}
             changeColor={changeTeamColor}
-            collaborators={collaborators.filter(collaborator =>
-              collaborator.team === team.name
-            )}
+            collaborators={
+              collaborators.filter(collaborator =>
+                collaborator.team === team.name
+              )
+            }
             deleteCollaborator={deleteCollaborator}
           />
-        )}
+        })}
       </section>
 
       <Footer />
