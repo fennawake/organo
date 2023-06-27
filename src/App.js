@@ -235,12 +235,19 @@ function App() {
     }))
   }
 
+  const addTeam = (newTeam) => {
+    setTeams([...teams, { ...newTeam, id: uid() }])
+  }
 
 
   return (
     <div className="App">
       <Banner />
-      <Form teams={teams.map(team => team.name)} addCollaborator={collaborator => addNewCollaborator(collaborator)} />
+      <Form
+        addTeam={addTeam}
+        teams={teams.map(team => team.name)}
+        addCollaborator={collaborator => addNewCollaborator(collaborator)}
+      />
 
       <section className="teams">
         <h1>My organization</h1>

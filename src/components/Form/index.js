@@ -4,12 +4,14 @@ import InputText from '../InputText'
 import Dropdown from '../Dropdown'
 import './Form.css'
 
-const Form = ({ addCollaborator, teams }) => {
+const Form = ({ addCollaborator, teams, addTeam }) => {
 
     const [name, setName] = useState('')
     const [position, setPosition] = useState('')
     const [image, setImage] = useState('')
     const [team, setTeam] = useState('')
+    const [teamName, setTeamName] = useState('')
+    const [teamColor, setTeamColor] = useState('')
 
     const saving = (event) => {
         event.preventDefault()
@@ -60,6 +62,29 @@ const Form = ({ addCollaborator, teams }) => {
                 />
                 <Button>
                     Create Card
+                </Button>
+            </form>
+            <form onSubmit={(event) => {
+                event.preventDefault()
+                addTeam({ name: teamName, color: teamColor })
+            }}>
+                <h2>Fill your details to create a new team.</h2>
+                <InputText
+                    obrigatorio={true}
+                    label="Team name"
+                    placeholder="Team name..."
+                    valueField={teamName}
+                    valueChanged={valueField => setTeamName(valueField)}
+                />
+                <InputText
+                    obrigatorio={true}
+                    label="Team color"
+                    placeholder="Team color..."
+                    valueField={teamColor}
+                    valueChanged={valueField => setTeamColor(valueField)}
+                />
+                <Button>
+                    Create new team
                 </Button>
             </form>
         </section>
