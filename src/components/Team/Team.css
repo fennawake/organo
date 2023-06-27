@@ -14,7 +14,7 @@
 .team .collaborators {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
     margin-top: 32px;
 }
 
