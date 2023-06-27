@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Button from '../Button'
-import InputText from '../InputText'
+import Input from '../Input'
 import Dropdown from '../Dropdown'
 import './Form.css'
 
@@ -32,60 +32,56 @@ const Form = ({ addCollaborator, teams, addTeam }) => {
         <section className='form'>
             <form onSubmit={saving}>
                 <h2>Fill your details to create a contributor's card.</h2>
-                <InputText
-                    obrigatorio={true}
+                <Input
+                    requerid
                     label="Name"
                     placeholder="Your name..."
                     valueField={name}
                     valueChanged={valueField => setName(valueField)}
                 />
-                <InputText
-                    obrigatorio={true}
+                <Input
+                    requerid
                     label="Position"
                     placeholder="Your position..."
                     valueField={position}
                     valueChanged={valueField => setPosition(valueField)}
                 />
-                <InputText
-                    obrigatorio={false}
+                <Input
+                    requerid={false}
                     label="Image"
                     placeholder="Your URL image..."
                     valueField={image}
                     valueChanged={valueField => setImage(valueField)}
                 />
                 <Dropdown
-                    required={true}
+                    required
                     label="Team"
                     items={teams}
                     valueField={team}
                     valueChanged={valueField => setTeam(valueField)}
                 />
-                <Button>
-                    Create Card
-                </Button>
+                <Button>Create Card</Button>
             </form>
             <form onSubmit={(event) => {
                 event.preventDefault()
                 addTeam({ name: teamName, color: teamColor })
             }}>
                 <h2>Fill your details to create a new team.</h2>
-                <InputText
-                    obrigatorio={true}
+                <Input
+                    requerid
                     label="Team name"
                     placeholder="Team name..."
                     valueField={teamName}
                     valueChanged={valueField => setTeamName(valueField)}
                 />
-                <InputText
-                    obrigatorio={true}
+                <Input
+                    type='color'
+                    requerid={true}
                     label="Team color"
-                    placeholder="Team color..."
                     valueField={teamColor}
                     valueChanged={valueField => setTeamColor(valueField)}
                 />
-                <Button>
-                    Create new team
-                </Button>
+                <Button>Create new team</Button>
             </form>
         </section>
     )

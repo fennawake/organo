@@ -7,6 +7,7 @@ import { uid } from 'uid';
 
 function App() {
 
+  // this result should come from a API to show all the teams
   const [teams, setTeams] = useState([
     {
       id: uid(),
@@ -45,6 +46,9 @@ function App() {
     }
   ])
 
+  // this result is just a initial data loaded to start with
+  // some content
+  // this content should come from a API
   const inicial = [
     {
       id: uid(),
@@ -216,16 +220,24 @@ function App() {
     },
   ]
 
+  // useStates
   const [collaborators, setCollaborators] = useState(inicial)
 
+
+  // functions
+  //
+  // Add a new collaborator to array of collaborators
   const addNewCollaborator = (collaborator) => {
     setCollaborators([...collaborators, collaborator])
   }
 
+  // Delete a collaborator if id is the same id when click
+  // in the icon to delete
   const deleteCollaborator = (id) => {
     setCollaborators(collaborators.filter(collaborator => collaborator.id !== id))
   }
 
+  // Change the team color when a new color is selected in the input
   const changeTeamColor = (color, id) => {
     setTeams(teams.map(team => {
       if (team.id === id) {
@@ -235,10 +247,10 @@ function App() {
     }))
   }
 
+  // Add a new team to team dropdaown field
   const addTeam = (newTeam) => {
     setTeams([...teams, { ...newTeam, id: uid() }])
   }
-
 
   return (
     <div className="App">
