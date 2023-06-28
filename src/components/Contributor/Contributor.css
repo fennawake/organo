@@ -3,6 +3,7 @@
     flex-direction: column;
     width: 250px;
     position: relative;
+    gap: 8px;
 }
 
 .contributor .header {
