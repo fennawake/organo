@@ -14,8 +14,9 @@
 .team .collaborators {
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
     margin-top: 32px;
+    gap: 20px;
 }
 
 .team .input-color {
